@@ -29,7 +29,6 @@ const ItemPreview = (props) => {
     }
   };
 
-  console.log(item.image)
   return (
     <div
       className="card bg-dark border-light p-3"
@@ -40,7 +39,7 @@ const ItemPreview = (props) => {
         src={item.image}
         onError={({ currentTarget }) => {
           currentTarget.onerror = null; // prevents looping
-          currentTarget.src="/placeholder.png";
+          currentTarget.src = "/placeholder.png";
         }}
         className="card-img-top item-img"
         style={{ borderRadius: "20px" }}
