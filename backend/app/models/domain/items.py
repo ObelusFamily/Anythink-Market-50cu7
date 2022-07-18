@@ -6,7 +6,7 @@ from app.models.domain.rwmodel import RWModel
 
 
 class Item(IDModelMixin, DateTimeModelMixin, RWModel):
-    slug: str
+    slug: str = "placeholder.png"
     title: str
     description: str
     tags: List[str]
