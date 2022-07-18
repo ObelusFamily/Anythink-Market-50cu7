@@ -46,9 +46,9 @@ async def list_items(
         ItemForResponse.from_orm(item) for item in items
     ]
 
-    for item in items_for_response:
-        if item.image == "":
-            item.image = "placeholder.png"
+    # for item in items_for_response:
+    #     if item.image == "":
+    #         item.image = "placeholder.png"
 
     return ListOfItemsInResponse(
         items=items_for_response,
@@ -91,8 +91,8 @@ async def retrieve_item_by_slug(
     item: Item = Depends(get_item_by_slug_from_path),
 ) -> ItemInResponse:
     item = ItemForResponse.from_orm(item)
-    if item.image == "":
-        item.image = "placeholder.png"
+    # if item.image == "":
+    #     item.image = "placeholder.png"
     return ItemInResponse(item=item)
 
 
