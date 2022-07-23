@@ -139,11 +139,11 @@ class ItemsRepository(BaseRepository):  # noqa: WPS214
         # fmt: on
 
         if title:
-            query_params.append(title)
+            query_params.append(title + '%')
             query_params_count += 1
 
             # fmt: off
-            query = query.where(items.title == Parameter(query_params_count))
+            query = query.where(items.title.like(Parameter(query_params_count)))
             # fmt: on
 
         if tag:
