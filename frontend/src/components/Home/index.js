@@ -7,7 +7,8 @@ import { connect } from "react-redux";
 import {
   HOME_PAGE_LOADED,
   HOME_PAGE_UNLOADED,
-  APPLY_TAG_FILTER, APPLY_TITLE_FILTER,
+  APPLY_TAG_FILTER,
+  APPLY_TITLE_FILTER,
 } from "../../constants/actionTypes";
 
 const Promise = global.Promise;

@@ -14,7 +14,7 @@ import {
 } from "../constants/actionTypes";
 
 const reducer = (state = {}, action) => {
-  console.log(action)
+  console.log(action);
   switch (action.type) {
     case ITEM_FAVORITED:
     case ITEM_UNFAVORITED:
