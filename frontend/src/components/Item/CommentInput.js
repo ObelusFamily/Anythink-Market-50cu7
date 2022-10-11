@@ -8,7 +8,7 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 const CommentInput = (props) => {
-  [body, setBody] = React.useState("");
+  const [body, setBody] = React.useState("");
   const createComment = async (ev) => {
     ev.preventDefault();
     agent.Comments.create(props.slug, {
